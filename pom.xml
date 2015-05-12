@@ -47,14 +47,6 @@
     <module>all</module>
   </modules>
   <build>
-        <extensions>
-            <!-- support for S3 as maven repository -->
-            <extension>
-                <groupId>org.springframework.build</groupId>
-                <artifactId>aws-maven</artifactId>
-                <version>5.0.0.RELEASE</version>
-            </extension>
-        </extensions>
     <plugins>
       <plugin>
         <groupId>com.mycila.maven-license-plugin</groupId>
@@ -173,37 +165,4 @@
       </build>
     </profile>
   </profiles>
-      <distributionManagement>
-        <repository>
-            <id>aws-release</id>
-            <name>AWS Release Repository</name>
-            <url>s3://artifacts-eu/maven/release</url>
-        </repository>
-        <snapshotRepository>
-            <id>aws-snapshot</id>
-            <name>AWS Snapshot Repository</name>
-            <url>s3://artifacts-eu/maven/snapshot</url>
-        </snapshotRepository>
-    </distributionManagement>
-    <!-- move repo stuff to somewhere central in future -->
-    <repositories>
-        <repository>
-            <id>aws-release</id>
-            <name>AWS Release Repository</name>
-            <url>https://s3-eu-west-1.amazonaws.com/artifacts-eu/maven/release</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-        </repository>
-        <repository>
-            <id>aws-snapshot</id>
-            <name>AWS Snapshot Repository</name>
-            <url>https://s3-eu-west-1.amazonaws.com/artifacts-eu/maven/snapshot</url>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
 </project>
