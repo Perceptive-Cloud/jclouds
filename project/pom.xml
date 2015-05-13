@@ -840,8 +840,8 @@
         <plugin>
           <artifactId>maven-surefire-report-plugin</artifactId>
           <version>${surefire.version}</version>
-        </plugin>
-        <plugin-->
+        </plugin-->
+        <plugin>
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
           <version>0.10</version>
